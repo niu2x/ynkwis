@@ -155,7 +155,7 @@ tcp:listen(2, function(err)
     if err then return end
     local client_tcp = luv.new_tcp()
     tcp:accept(client_tcp)
-    Tiger:new_local(client_tcp)
+    Tiger:new(client_tcp)
 end)
 
 luv.run()
